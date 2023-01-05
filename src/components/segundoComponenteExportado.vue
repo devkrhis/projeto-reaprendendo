@@ -9,15 +9,18 @@
 
 <script>
 export default {
-    props: ['valueMagic','oldValue']
+    // props: ['valueMagic','oldValue']
     // também podemos realizar da seguinte forma:
-    // props: [
-    //     valueMagic: [ -> aqui eu transformo em um objeto
-    //         type: String, -> passando o tipo, dizendo que é string
-    //         required: true, -> forçando a ter, dizendo que tem que ter esse valueMagic
-    //         default: "anonimo" -> aqui é caso não tenha nada, ai por padrão vai pegar anonimo
-    //     ]
-    // ]
+    props: { // -> aqui vira um objeto também
+        valueMagic: { //-> aqui eu transformo em um objeto
+            type: Number, //-> passando o tipo, dizendo que é string
+            // required: true, //-> forçando a ter, dizendo que tem que ter esse valueMagic
+            default: 100 //-> aqui é caso não tenha nada, ai por padrão vai pegar anonimo ou o que eu coloquei.
+        },
+        oldValue: {
+            type: Number // mesmo funcionando ele apresenta erro no console, pois tenta fazer a verificação
+        }
+    }
     
 }
 </script>
