@@ -10,6 +10,14 @@
 <script>
 export default {
     props: ['valueMagic','oldValue']
+    // também podemos realizar da seguinte forma:
+    // props: [
+    //     valueMagic: [ -> aqui eu transformo em um objeto
+    //         type: String, -> passando o tipo, dizendo que é string
+    //         required: true, -> forçando a ter, dizendo que tem que ter esse valueMagic
+    //         default: "anonimo" -> aqui é caso não tenha nada, ai por padrão vai pegar anonimo
+    //     ]
+    // ]
     
 }
 </script>
