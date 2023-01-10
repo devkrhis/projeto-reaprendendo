@@ -8,7 +8,11 @@
         <button type="button" @click="changeMenorValue"> Diminuindo Valor</button>
         <hr>
         <hr>
-        <reinicializandoNome :name="name" @alteracaoDeNome="name = $event" @VerificandoCpf="orgDevedor = $event" @VerificandoNovamenteCpf="orgDevedor = $event"/>
+        <reinicializandoNome :name="name" 
+        @alteracaoDeNome="name = $event" 
+        @VerificandoCpf="orgDevedor = $event" 
+        @VerificandoNovamenteCpf="orgDevedor = $event"
+        :reiniciarFN="changeNameCallback"/>
 
         <div id="cadastro">
             <hr>
@@ -64,6 +68,9 @@ export default {
         },
         reiniciarInfo(){
             this.orgDevedor = 'Não foi possível analisar'
+        },
+        changeNameCallback(){
+            this.name = 'Lucas Callback'
         }
     }
     

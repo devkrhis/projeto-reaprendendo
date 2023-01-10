@@ -5,6 +5,7 @@
         <button type="button" @click="recoverName"> Reiniciando Nome </button>
         <button type="button" @click="secondAvaliation">  Validar Novamente CPF </button>
         <button type="button" @click="thirdAvalatiation">  Ultima Checkagem </button>
+        <button type="button" @click="reiniciarFN"> Reinicialização Callback </button>
     </div>
     
 </template>
@@ -12,7 +13,16 @@
 <script>
 /* eslint-disable */
 export default {
-    props: ['name', 'orgDevedor'],
+    //props: ['name', 'orgDevedor'],
+    props: {
+        name: {
+            type: String
+        },
+        orgDevedor: {
+            type: String
+        },
+        reiniciarFN: Function
+    },
     methods: {
         recoverName(){
             this.name = 'Krhistopher'
